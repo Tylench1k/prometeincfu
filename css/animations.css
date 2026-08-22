@@ -1,0 +1,15 @@
+/* Shared entrance animation + scroll-reveal utility */
+
+@keyframes fade-up { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+
+@media (prefers-reduced-motion: no-preference) {
+  .hero-text .eyebrow, .hero-title, .hero-sub, .hero-cta { animation: fade-up .8s var(--ease) both; }
+  .hero-title { animation-delay: .1s; }
+  .hero-sub { animation-delay: .22s; }
+  .hero-cta { animation-delay: .34s; }
+  .profile-wrap { animation: fade-up .8s var(--ease) .2s both; }
+}
+
+.reveal { opacity: 0; transform: translateY(14px); transition: opacity .6s var(--ease), transform .6s var(--ease); }
+.reveal.is-visible { opacity: 1; transform: translateY(0); }
+@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; } }

@@ -1,0 +1,20 @@
+/* Shared inner-page layout — news articles, direction pages, Положение, Структура, Календарь */
+
+.page-main { padding: clamp(2rem, 5vw, 3.5rem) 0 clamp(3rem, 6vw, 5rem); }
+.back-link { display: inline-flex; align-items: center; gap: .35rem; margin-bottom: 1.25rem; color: var(--color-accent-deep); font-weight: 700; font-size: .86rem; }
+.content-card { background: var(--color-surface); border-radius: calc(var(--radius-card) + 4px); box-shadow: var(--shadow-soft); padding: clamp(1.75rem, 4vw, 3rem); }
+.content-header { margin-bottom: 2rem; }
+.content-header h1 { font-size: clamp(1.8rem, 4.5vw, 2.75rem); line-height: 1.15; margin: .5rem 0 .75rem; font-weight: 800; letter-spacing: -.01em; color: var(--color-ink); }
+.content-header p { color: var(--color-graphite); line-height: 1.7; }
+
+.article-body { color: var(--color-graphite); line-height: 1.75; }
+.article-body h2 { color: var(--color-ink); font-size: 1.2rem; margin: 1.8rem 0 .6rem; font-weight: 700; }
+.article-body p { margin: .6rem 0; }
+.article-body strong { color: var(--color-ink); }
+
+.doc-section { padding: 1.15rem 0; border-bottom: 1px solid var(--color-hairline); }
+.doc-section:first-child { padding-top: 0; }
+.doc-section:last-child { border-bottom: none; }
+.doc-section h2 { margin-top: 0; }
+
+.page-cta { margin-top: 1.5rem; }

@@ -1,0 +1,15 @@
+/* Participation — dark CTA banner, homepage only */
+
+.participation { padding: 0 0 clamp(3rem, 7vw, 5rem); }
+.participation-card { background: var(--color-ink); color: var(--color-canvas); border-radius: calc(var(--radius-card) + 4px); padding: clamp(1.75rem, 4vw, 2.5rem); display: flex; justify-content: space-between; gap: 2rem; align-items: flex-end; flex-wrap: wrap; }
+.participation-card h2 { font-size: clamp(1.5rem, 3vw, 2rem); margin: .4rem 0 .7rem; font-weight: 800; }
+.participation-card p { color: rgba(250,246,238,.68); max-width: 54ch; line-height: 1.6; }
+.participation-actions { display: flex; flex-wrap: wrap; gap: .6rem; justify-content: flex-end; }
+.participation-actions .btn-ghost { background: transparent; border-color: rgba(250,246,238,.22); color: var(--color-canvas); }
+.participation-actions .btn-ghost:hover { border-color: var(--color-accent); color: var(--color-accent); }
+
+@media (max-width: 860px) {
+  .participation-card { align-items: flex-start; flex-direction: column; }
+  .participation-actions { justify-content: flex-start; }
+}
+@media (max-width: 500px) { .participation-actions .btn { flex: 1 1 auto; } }

@@ -1,0 +1,19 @@
+/* Footer — brand block + circular social icon buttons in the bottom bar */
+
+.site-footer { padding: clamp(2.5rem, 5vw, 3.5rem) clamp(1.25rem, 4vw, 2.5rem) 1.5rem; }
+.footer-card { max-width: var(--container); margin: 0 auto; background: var(--color-ink); color: var(--color-canvas); border-radius: calc(var(--radius-card) + 8px); padding: clamp(2rem, 4vw, 3rem) clamp(1.75rem, 4vw, 3rem); }
+
+.footer-top { padding-bottom: 1.75rem; border-bottom: 1px solid rgba(250,246,238,.14); }
+.footer-brand .brand-name { color: var(--color-canvas); }
+.footer-brand .brand-sub { color: rgba(250,246,238,.5); }
+.footer-brand p { font-size: .88rem; font-weight: 500; color: rgba(250,246,238,.62); max-width: 40ch; line-height: 1.6; margin-top: .9rem; }
+
+.footer-bottom { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem; padding-top: 1.5rem; }
+.footer-copy { display: flex; flex-direction: column; gap: .2rem; font-size: .78rem; font-weight: 500; color: rgba(250,246,238,.45); }
+
+.social-row { display: flex; gap: .6rem; }
+.social-btn { width: 40px; height: 40px; border-radius: 50%; background: rgba(250,246,238,.08); display: grid; place-items: center; color: var(--color-canvas); transition: background .2s var(--ease), transform .2s var(--ease); }
+.social-btn:hover { background: var(--color-accent); transform: translateY(-2px); }
+.social-btn svg { width: 18px; height: 18px; }
+
+@media (max-width: 560px) { .footer-bottom { flex-direction: column; align-items: flex-start; } }
