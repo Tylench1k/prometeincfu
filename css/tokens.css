@@ -22,6 +22,34 @@
   --container: 1160px;
 }
 
+:root[data-theme="dark"] {
+  --color-canvas: #101B33;
+  --color-page: #0B1428;
+  --color-ink: #F3EFE6;
+  --color-ink-deep: #FFFFFF;
+  --color-accent: #D6B784;
+  --color-accent-deep: #EAC993;
+  --color-graphite: #A9B0BE;
+  --color-hairline: #263251;
+  --color-surface: #16223E;
+  --shadow-soft: 0 2px 16px rgba(0, 0, 0, 0.35);
+  --shadow-float: 0 10px 30px rgba(0, 0, 0, 0.45);
+}
+
+/* Deliberately-dark decorative blocks (footer, CTA banner) stay dark navy with
+   light text no matter which site theme is active — they are not meant to
+   invert, so they read from a fixed palette instead of the themed tokens. */
+:root {
+  --color-block: #16223E;
+  --color-block-deep: #101A30;
+  --color-on-block: #FAF6EE;
+  --color-accent-on-block: #E9C58A;
+}
+
+html, body, .site-header, .hero-card, .footer-card, .content-card, .direction-card, .news-card, .news-grid-item, .mobile-sheet, .profile-card, .participation-card {
+  transition: background-color .35s var(--ease), color .35s var(--ease), border-color .35s var(--ease), box-shadow .35s var(--ease);
+}
+
 * { box-sizing: border-box; }
 html { scroll-behavior: auto; }
 @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }

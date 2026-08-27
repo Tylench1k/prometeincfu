@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
+<script>(function(){var t=localStorage.getItem('prometheus-theme');if(!t){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);})();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Положение СНО — Прометей</title>
 <meta name="description" content="Полный текст положения о Научном студенческом обществе «Прометей».">
@@ -28,9 +29,15 @@
         <span class="brand-sub">СНО · ФМО СКФУ</span>
       </span>
     </a>
-    <button class="nav-toggle" id="navToggle" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobileSheet">
-      <span></span><span></span><span></span>
-    </button>
+    <div class="header-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"></circle><line x1="12" y1="2" x2="12" y2="4"></line><line x1="12" y1="20" x2="12" y2="22"></line><line x1="2" y1="12" x2="4" y2="12"></line><line x1="20" y1="12" x2="22" y2="12"></line><line x1="4.9" y1="4.9" x2="6.3" y2="6.3"></line><line x1="17.7" y1="17.7" x2="19.1" y2="19.1"></line><line x1="4.9" y1="19.1" x2="6.3" y2="17.7"></line><line x1="17.7" y1="6.3" x2="19.1" y2="4.9"></line></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="currentColor"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4 7 7 0 0 0 20 14.5Z"></path></svg>
+      </button>
+      <button class="nav-toggle" id="navToggle" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobileSheet">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </header>
 </div>
 
@@ -116,10 +123,12 @@
       <div class="social-row">
         <a class="social-btn" href="https://vk.ru/prometeincfu" target="_blank" rel="noopener noreferrer" aria-label="Прометей ВКонтакте"><span style="font-weight:800;font-size:.82rem;letter-spacing:-.02em">VK</span></a>
         <a class="social-btn" href="https://t.me/prometeincfu" target="_blank" rel="noopener noreferrer" aria-label="Прометей в Telegram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="21" y1="3" x2="10" y2="14"></line><path d="M21 3L14 21l-4-7-7-4z"></path></svg></a>
+        <a class="social-btn" href="https://max.ru/channel_prometeincfu" target="_blank" rel="noopener noreferrer" aria-label="Прометей в MAX"><span style="font-weight:800;font-size:.62rem;letter-spacing:-.01em">MAX</span></a>
       </div>
     </div>
   </div>
 </footer>
+<script src="js/theme.js"></script>
 <script src="js/nav.js"></script>
 <script src="js/reveal.js"></script>
 </body>

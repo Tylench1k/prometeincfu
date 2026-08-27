@@ -2,6 +2,7 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
+<script>(function(){var t=localStorage.getItem('prometheus-theme');if(!t){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);})();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Прометей — СНО ФМО СКФУ</title>
 <meta name="description" content="Студенческое научное общество факультета международных отношений СКФУ.">
@@ -31,9 +32,15 @@
         <span class="brand-sub">СНО · ФМО СКФУ</span>
       </span>
     </a>
-    <button class="nav-toggle" id="navToggle" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobileSheet">
-      <span></span><span></span><span></span>
-    </button>
+    <div class="header-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"></circle><line x1="12" y1="2" x2="12" y2="4"></line><line x1="12" y1="20" x2="12" y2="22"></line><line x1="2" y1="12" x2="4" y2="12"></line><line x1="20" y1="12" x2="22" y2="12"></line><line x1="4.9" y1="4.9" x2="6.3" y2="6.3"></line><line x1="17.7" y1="17.7" x2="19.1" y2="19.1"></line><line x1="4.9" y1="19.1" x2="6.3" y2="17.7"></line><line x1="17.7" y1="6.3" x2="19.1" y2="4.9"></line></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="currentColor"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4 7 7 0 0 0 20 14.5Z"></path></svg>
+      </button>
+      <button class="nav-toggle" id="navToggle" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobileSheet">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </header>
 </div>
 
@@ -77,7 +84,7 @@
   <div class="profile-wrap">
     <div class="profile-card">
       <span class="profile-mark" aria-hidden="true"><svg viewBox="0 0 40 52"><path d="M20 4 C 12 14 6 23 6 33 C 6 43 13 49 20 49 C 27 49 34 43 34 33 C 34 26 30 21 27 18 C 28 23 25 27 22 27 C 24 21 22 12 20 4 Z" fill="none" stroke="var(--color-accent)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-      <div class="profile-avatar"><img src=ава.jpg"></div>
+      <div class="profile-avatar"><img src="images/chairman.jpg" alt="Председатель СНО «Прометей»"></div>
       <span class="profile-kicker">Руководство</span>
       <a class="btn btn-primary" href="https://t.me/tylench1k_0806" target="_blank" rel="noopener noreferrer">Председатель СНО</a>
     </div>
@@ -87,9 +94,9 @@
 <section class="directions" id="directions"><div class="section-inner">
   <div class="section-head"><p class="eyebrow">Чем мы занимаемся</p><h2 class="section-title">Направления работы</h2></div>
   <div class="directions-grid">
-    <a class="direction-card reveal" href="directions/science.html"><div class="direction-icon">▤</div><h3>Научная деятельность</h3><p>Статьи, доклады и участие в конференциях по международной проблематике.</p><span class="card-more">Подробнее ↗</span></a>
-    <a class="direction-card reveal" href="directions/models.html"><div class="direction-icon">◈</div><h3>Политические модели</h3><p>Деловые игры и симуляции международных кризисов с решениями от лица государств.</p><span class="card-more">Подробнее ↗</span></a>
-    <a class="direction-card reveal" href="directions/discussions.html"><div class="direction-icon">○</div><h3>Круглые столы и дискуссионные клубы</h3><p>Открытые дискуссии и встречи с экспертами по актуальным темам международных отношений.</p><span class="card-more">Подробнее ↗</span></a>
+    <a class="direction-card reveal" href="directions/science.html"><div class="direction-icon">🔬</div><h3>Научная деятельность</h3><p>Статьи, доклады и участие в конференциях по международной проблематике.</p><span class="card-more">Подробнее ↗</span></a>
+    <a class="direction-card reveal" href="directions/models.html"><div class="direction-icon">🤵🏻</div><h3>Политические модели</h3><p>Деловые игры и симуляции международных кризисов с решениями от лица государств.</p><span class="card-more">Подробнее ↗</span></a>
+    <a class="direction-card reveal" href="directions/discussions.html"><div class="direction-icon">🗣</div><h3>Круглые столы и дискуссионные клубы</h3><p>Открытые дискуссии и встречи с экспертами по актуальным темам международных отношений.</p><span class="card-more">Подробнее ↗</span></a>
   </div>
 </div></section>
 
@@ -97,23 +104,19 @@
   <div class="section-head news-head"><div><p class="eyebrow">Новостная лента</p><h2 class="section-title">Что происходит в обществе</h2></div><a class="btn btn-ghost btn-small" href="news/index.html">Все новости ↗</a></div>
   <div class="news-tools">
     <button class="filter-chip is-active" data-filter="all">Все</button>
-    <button class="filter-chip" data-filter="Документы">Документы</button>
-    <button class="filter-chip" data-filter="Публикации">Публикации</button>
-    <button class="filter-chip" data-filter="Конференции">Конференции</button>
-    <button class="filter-chip" data-filter="Набор">Набор</button>
-    <button class="filter-chip" data-filter="Заседания">Заседания</button>
+    <button class="filter-chip" data-filter="Мероприятия и события">Мероприятия и события</button>
+    <button class="filter-chip" data-filter="Жизнь СНО">Жизнь СНО</button>
+    <button class="filter-chip" data-filter="Наши успехи">Наши успехи</button>
   </div>
   <div class="news-card">
-    <a class="news-featured news-item reveal" data-tags="Документы" href="news/polozhenie-review.html">
-      <div class="news-meta"><span class="news-date">Август 2026</span><span class="news-tag">Документы</span></div>
-      <h3 class="news-featured-title">Положение о СНО «Прометей»</h3>
-      <p>На сайте опубликован полный текст действующего положения о Научном студенческом обществе.</p>
+    <a class="news-featured news-item reveal" data-tags="Мероприятия и события" href="news/sobranie-chlenov.html">
+      <div class="news-meta"><span class="news-date">Сентябрь 2026</span><span class="news-tag">Мероприятия и события</span></div>
+      <h3 class="news-featured-title">Собрание членов СНО</h3>
+      <p>Общество собралось в полном составе, чтобы обсудить планы на новый учебный год.</p>
     </a>
     <ul class="news-list">
-      <li class="news-row news-item reveal" data-tags="Публикации"><a href="news/north-south.html"><span class="news-date">Июль 2026</span><span class="news-tag">Публикации</span><h3 class="news-headline">Международный коридор «Север – Юг»: институциональные барьеры</h3><span class="news-arrow" aria-hidden="true">→</span></a></li>
-      <li class="news-row news-item reveal" data-tags="Конференции"><a href="news/conference.html"><span class="news-date">До 15 окт.</span><span class="news-tag">Конференции</span><h3 class="news-headline">Приём заявок: «Геополитическая динамика Большой Евразии» (Казань)</h3><span class="news-arrow" aria-hidden="true">→</span></a></li>
-      <li class="news-row news-item reveal" data-tags="Набор"><a href="news/recruitment.html"><span class="news-date">Сентябрь 2026</span><span class="news-tag">Набор</span><h3 class="news-headline">Открыт набор в СНО «Прометей»</h3><span class="news-arrow" aria-hidden="true">→</span></a></li>
-      <li class="news-row news-item reveal" data-tags="Заседания"><a href="news/council.html"><span class="news-date">Сентябрь 2026</span><span class="news-tag">Заседания</span><h3 class="news-headline">Первое заседание Совета в новом учебном году</h3><span class="news-arrow" aria-hidden="true">→</span></a></li>
+      <li class="news-row news-item reveal" data-tags="Жизнь СНО"><a href="news/new-polozhenie.html"><span class="news-date">Август 2026</span><span class="news-tag">Жизнь СНО</span><h3 class="news-headline">Выложено новое положение</h3><span class="news-arrow" aria-hidden="true">→</span></a></li>
+      <li class="news-row news-item reveal" data-tags="Наши успехи"><a href="news/vybory.html"><span class="news-date">Июнь 2026</span><span class="news-tag">Наши успехи</span><h3 class="news-headline">Прошли выборы председателя СНО</h3><span class="news-arrow" aria-hidden="true">→</span></a></li>
     </ul>
   </div>
 </div></section>
@@ -149,10 +152,12 @@
       <div class="social-row">
         <a class="social-btn" href="https://vk.ru/prometeincfu" target="_blank" rel="noopener noreferrer" aria-label="Прометей ВКонтакте"><span style="font-weight:800;font-size:.82rem;letter-spacing:-.02em">VK</span></a>
         <a class="social-btn" href="https://t.me/prometeincfu" target="_blank" rel="noopener noreferrer" aria-label="Прометей в Telegram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="21" y1="3" x2="10" y2="14"></line><path d="M21 3L14 21l-4-7-7-4z"></path></svg></a>
+        <a class="social-btn" href="https://max.ru/channel_prometeincfu" target="_blank" rel="noopener noreferrer" aria-label="Прометей в MAX"><span style="font-weight:800;font-size:.62rem;letter-spacing:-.01em">MAX</span></a>
       </div>
     </div>
   </div>
 </footer>
+<script src="js/theme.js"></script>
 <script src="js/nav.js"></script>
 <script src="js/reveal.js"></script>
 <script src="js/news-filter.js"></script>

@@ -14,8 +14,8 @@
 .profile-card { position: relative; width: 100%; max-width: 260px; background: var(--color-surface); border-radius: var(--radius-card); box-shadow: var(--shadow-soft); padding: 2.25rem 1.75rem 1.75rem; display: flex; flex-direction: column; align-items: center; text-align: center; }
 .profile-mark { position: absolute; top: 1.25rem; right: 1.25rem; width: 18px; height: 18px; opacity: .55; }
 .profile-mark svg { width: 100%; height: 100%; }
-.profile-avatar { width: 108px; height: 108px; border-radius: 50%; margin-bottom: 1.1rem; display: grid; place-items: center; background: radial-gradient(circle at 35% 30%, #f4dfc2, #b8935a 55%, #16223e 100%); box-shadow: 0 0 0 4px var(--color-canvas), 0 0 0 5px var(--color-hairline); color: #fff; font-weight: 800; font-size: 1.6rem; letter-spacing: .02em; overflow: hidden; }
-.profile-avatar img { width: 100%; height: 100%; object-fit: cover; }
+.profile-avatar { width: 108px; height: 108px; border-radius: 50%; margin-bottom: 1.1rem; display: grid; place-items: center; background: radial-gradient(circle at 35% 30%, #f4dfc2, #b8935a 55%, #16223e 100%); box-shadow: 0 0 0 4px var(--color-canvas), 0 0 0 5px var(--color-hairline); color: #fff; font-weight: 800; font-size: 1.6rem; letter-spacing: .02em; overflow: hidden; flex-shrink: 0; }
+.profile-avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .profile-kicker { font-size: .68rem; text-transform: uppercase; letter-spacing: .09em; color: var(--color-accent-deep); font-weight: 700; margin-bottom: 1.15rem; }
 .profile-card .btn { width: 100%; }
 

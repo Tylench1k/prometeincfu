@@ -2,7 +2,7 @@
 
 .directions { padding: 0 0 clamp(2.5rem, 5vw, 4rem); }
 .directions-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.25rem; }
-.direction-card { background: var(--color-surface); border-radius: var(--radius-card); box-shadow: var(--shadow-soft); padding: clamp(1.75rem, 3vw, 2.25rem); transition: box-shadow .3s var(--ease), transform .3s var(--ease); display: flex; flex-direction: column; min-height: 230px; }
+.direction-card { background: var(--color-surface); border-radius: var(--radius-card); box-shadow: var(--shadow-soft); padding: clamp(1.75rem, 3vw, 2.25rem); transition: box-shadow .3s var(--ease), transform .3s var(--ease), background-color .35s var(--ease), color .35s var(--ease), border-color .35s var(--ease); display: flex; flex-direction: column; min-height: 230px; }
 .direction-card:hover { box-shadow: var(--shadow-float); transform: translateY(-2px); }
 .direction-icon { width: 42px; height: 42px; margin-bottom: 1.2rem; background: var(--color-page); border-radius: var(--radius-control); display: grid; place-items: center; font-size: 1.15rem; font-weight: 800; color: var(--color-ink); }
 .direction-card h3 { font-size: 1.08rem; font-weight: 700; color: var(--color-ink); margin-bottom: .55rem; letter-spacing: -.01em; }
