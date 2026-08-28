@@ -1,5 +1,3 @@
-// Dark/light theme toggle. The initial theme is already set by a small inline
-// script in <head> (before first paint) — this file only handles the click.
 (function () {
   var root = document.documentElement;
   var btn = document.getElementById('themeToggle');
@@ -15,7 +13,6 @@
     btn.setAttribute('aria-label', theme === 'dark' ? 'Включить светлую тему' : 'Включить тёмную тему');
   }
 
-  // Sync the meta tag with whatever the inline script already applied
   apply(root.getAttribute('data-theme') || 'light');
 
   btn.addEventListener('click', function () {
