@@ -1,4 +1,3 @@
-// Filters .news-item elements by their data-tags attribute using the .filter-chip buttons
 (function () {
   var chips = document.querySelectorAll('.filter-chip');
   var items = document.querySelectorAll('.news-item[data-tags]');
