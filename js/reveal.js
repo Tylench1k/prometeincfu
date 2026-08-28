@@ -1,4 +1,3 @@
-// Fades .reveal elements in as they scroll into view
 (function () {
   var els = document.querySelectorAll('.reveal');
   if (!els.length) return;
