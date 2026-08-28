@@ -1,5 +1,3 @@
-// Header hamburger + full-menu bottom sheet — identical behaviour on every page.
-// Also supports dragging the handle down to smoothly dismiss the sheet.
 (function () {
   var toggle = document.getElementById('navToggle');
   var sheet = document.getElementById('mobileSheet');
@@ -21,7 +19,6 @@
     toggle.classList.remove('is-active');
     toggle.setAttribute('aria-expanded', 'false');
     document.body.style.overflow = '';
-    // clear any leftover drag offset after the close transition finishes
     window.setTimeout(function () { sheet.style.removeProperty('--drag-y'); }, 400);
   }
 
@@ -32,10 +29,9 @@
   sheet.querySelectorAll('a').forEach(function (a) { a.addEventListener('click', closeSheet); });
   document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeSheet(); });
 
-  // Drag-to-dismiss via the handle bar
   if (handle && window.PointerEvent) {
     var startY = 0, dragY = 0, dragging = false;
-    var CLOSE_THRESHOLD = 90; // px of downward drag before it snaps shut
+    var CLOSE_THRESHOLD = 90;
 
     handle.addEventListener('pointerdown', function (e) {
       dragging = true;
@@ -46,7 +42,7 @@
 
     handle.addEventListener('pointermove', function (e) {
       if (!dragging) return;
-      dragY = Math.max(0, e.clientY - startY); // only allow dragging downward
+      dragY = Math.max(0, e.clientY - startY);
       sheet.style.setProperty('--drag-y', dragY + 'px');
     });
 
