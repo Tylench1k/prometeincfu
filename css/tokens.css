@@ -1,5 +1,3 @@
-/* Tokens & base reset — variables and global defaults shared by every page */
-
 :root {
   --color-canvas: #FAF6EE;
   --color-page: #F3EFE6;
@@ -36,9 +34,6 @@
   --shadow-float: 0 10px 30px rgba(0, 0, 0, 0.45);
 }
 
-/* Deliberately-dark decorative blocks (footer, CTA banner) stay dark navy with
-   light text no matter which site theme is active — they are not meant to
-   invert, so they read from a fixed palette instead of the themed tokens. */
 :root {
   --color-block: #16223E;
   --color-block-deep: #101A30;
