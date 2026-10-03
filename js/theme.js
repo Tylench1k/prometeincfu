@@ -5,12 +5,13 @@
   if (!btn) return;
 
   var COLORS = { light: '#FAF6EE', dark: '#101B33' };
+  var english = root.lang === 'en';
 
   function apply(theme) {
     root.setAttribute('data-theme', theme);
     localStorage.setItem('prometheus-theme', theme);
     if (metaTheme) metaTheme.setAttribute('content', COLORS[theme] || COLORS.light);
-    btn.setAttribute('aria-label', theme === 'dark' ? 'Включить светлую тему' : 'Включить тёмную тему');
+    btn.setAttribute('aria-label', english ? (theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme') : (theme === 'dark' ? 'Включить светлую тему' : 'Включить тёмную тему'));
   }
 
   apply(root.getAttribute('data-theme') || 'light');
