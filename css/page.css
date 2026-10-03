@@ -16,3 +16,9 @@
 .doc-section h2 { margin-top: 0; }
 
 .page-cta { margin-top: 1.5rem; }
+
+.documents-empty { padding: clamp(2rem, 5vw, 4rem) 1rem; text-align: center; border: 1px dashed var(--color-hairline); border-radius: var(--radius-control); background: var(--color-page); }
+.documents-empty svg { width: 48px; height: 48px; margin: 0 auto 1rem; color: var(--color-accent-deep); }
+.documents-empty h2 { font-size: clamp(1.1rem, 3vw, 1.4rem); font-weight: 700; color: var(--color-ink); }
+.documents-empty p { margin-top: .6rem; color: var(--color-graphite); line-height: 1.7; }
+.flag-japan { display: inline-block; width: 1.25em; height: .834em; vertical-align: -.05em; border-radius: 2px; box-shadow: 0 0 0 1px rgba(16,26,48,.12); }

@@ -1,0 +1,31 @@
+.form-card { max-width: 900px; margin: 0 auto; }
+.form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.35rem; }
+.form-field { min-width: 0; margin: 0; padding: 0; border: 0; }
+.form-field-wide { grid-column: 1 / -1; }
+.form-field > label, .form-field legend { display: block; margin-bottom: .6rem; padding: 0; color: var(--color-ink); font-size: .9rem; font-weight: 700; line-height: 1.55; }
+.form-field input[type="text"], .form-field textarea { display: block; width: 100%; min-height: 48px; padding: .8rem 1rem; border: 1px solid var(--color-hairline); border-radius: var(--radius-control); background: var(--color-page); color: var(--color-ink); font: inherit; font-size: .95rem; line-height: 1.55; }
+.form-field textarea { resize: vertical; }
+.form-field input:focus-visible, .form-field textarea:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; border-color: var(--color-accent); }
+.form-options .form-choice { display: flex; align-items: flex-start; gap: .75rem; margin-bottom: .75rem; color: var(--color-graphite); font-weight: 500; line-height: 1.65; cursor: pointer; }
+.form-choice input[type="checkbox"], .form-choice input[type="radio"] { width: 18px; height: 18px; flex: 0 0 18px; margin: .2rem 0 0; accent-color: var(--color-accent-deep); cursor: pointer; }
+.required-mark { color: var(--color-accent-deep); }
+.form-required-note { margin: 0 0 1.5rem; font-size: .78rem; color: var(--color-graphite); }
+.field-help, .country-options { margin: 0 0 .75rem; color: var(--color-graphite); font-size: .85rem; line-height: 1.65; }
+.country-options summary { cursor: pointer; color: var(--color-accent-deep); font-weight: 600; }
+.country-options p { margin-top: .5rem; }
+.form-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; margin-top: 1.75rem; }
+.form-status { font-size: .86rem; line-height: 1.65; color: var(--color-graphite); }
+.form-actions button:disabled { opacity: .65; cursor: wait; }
+.form-response[hidden], .native-form[hidden] { display: none; }
+.form-response { padding: 1.5rem 0 .5rem; }
+.form-response h2 { margin: 1rem 0 .6rem; font-size: 1.5rem; }
+.form-response p { color: var(--color-graphite); line-height: 1.65; }
+.form-response .btn { margin-top: 1.5rem; }
+.form-success-mark { display: grid; place-items: center; width: 56px; height: 56px; border-radius: 50%; color: var(--color-accent-deep); background: rgba(184,147,90,.12); }
+.form-success-mark svg { width: 28px; height: 28px; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+[data-form-frame] { display: none; }
+@media (max-width: 640px) {
+  .form-grid { grid-template-columns: 1fr; }
+  .form-field-wide { grid-column: auto; }
+  .form-actions .btn { width: 100%; }
+}
