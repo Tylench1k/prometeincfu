@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <script>(function(){var t=localStorage.getItem('prometheus-theme');if(!t){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);})();</script>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Все новости — Прометей</title>
-<meta name="description" content="Новостная лента СНО «Прометей»: все публикации с фильтром по темам.">
+<title>«Мир на грани: Холодная война» — Прометей</title>
+<meta name="description" content="Стратегическая симуляция в Hearts of Iron IV: 24 октября, 10:30, онлайн. Количество мест ограничено.">
 <meta name="theme-color" content="#FAF6EE">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/tokens.css">
@@ -13,8 +13,8 @@
 <link rel="stylesheet" href="../css/header.css">
 <link rel="stylesheet" href="../css/animations.css">
 <link rel="stylesheet" href="../css/footer.css">
-<link rel="stylesheet" href="../css/news.css">
 <link rel="stylesheet" href="../css/page.css">
+<link rel="stylesheet" href="../css/news.css">
 </head>
 <body>
 <svg class="svg-defs" aria-hidden="true"><defs>
@@ -68,63 +68,35 @@
     </nav>
   </div>
 </div>
-<main class="page-main" data-news-feed><div class="section-inner">
-  <a class="back-link" href="../index.html">← На главную</a>
-  <div class="content-header"><p class="eyebrow">Новостная лента</p><h1>Все новости</h1></div>
-  <div class="news-tools"><button class="filter-chip is-active" data-filter="all">Все</button><button class="filter-chip" data-filter="Мероприятия и события">Мероприятия и события</button><button class="filter-chip" data-filter="Жизнь СНО">Жизнь СНО</button><button class="filter-chip" data-filter="Наши успехи">Наши успехи</button></div>
-  <ul class="news-grid news-grid--cards">
-    <li class="news-grid-item news-item reveal" data-tags="Мероприятия и события">
-      <a class="news-preview" href="../news/cold-war.html">
-        <img class="news-preview-image" src="../images/cold-war.png" alt="Афиша «Мир на грани: Холодная война» — 24 октября" width="1672" height="941" loading="lazy" decoding="async">
-        <div class="news-preview-copy">
-          <div class="news-meta"><span class="news-date">24 октября · 10:30</span><span class="news-tag">Мероприятия и события</span></div>
-          <h3>«Мир на грани: Холодная война»</h3>
-          <span class="news-read-more">Читать новость ↗</span>
-        </div>
-      </a>
-    </li>
-    <li class="news-grid-item news-item reveal" data-tags="Мероприятия и события">
-      <a class="news-preview" href="../news/japan-cuisine-map.html">
-        <img class="news-preview-image" src="../images/japan-cuisine-map.png" alt="Афиша Japan Cuisine Map — Прометей и Бунка, 10 октября" width="1672" height="941" loading="lazy" decoding="async">
-        <div class="news-preview-copy">
-          <div class="news-meta"><span class="news-date">10 октября · 17:30</span><span class="news-tag">Мероприятия и события</span></div>
-          <h3><svg class="flag-japan" viewBox="0 0 30 20" role="img" aria-label="Флаг Японии"><rect width="30" height="20" fill="#fff"/><circle cx="15" cy="10" r="6" fill="#bc002d"/></svg> Japan Cuisine Map: путешествие по вкусам Японии</h3>
-          <span class="news-read-more">Читать новость ↗</span>
-        </div>
-      </a>
-    </li>
-    <li class="news-grid-item news-item reveal" data-tags="Жизнь СНО">
-      <a class="news-preview" href="../news/about-prometey.html">
-        <img class="news-preview-image" src="../images/about-prometey.png" alt="Прометей — пространство, где идеи превращаются в возможности" width="1254" height="1254" loading="lazy" decoding="async">
-        <div class="news-preview-copy">
-          <div class="news-meta"><span class="news-tag">Жизнь СНО</span></div>
-          <h3>🔥 Что же такое НСО «Прометей»?</h3>
-          <span class="news-read-more">Читать новость ↗</span>
-        </div>
-      </a>
-    </li>
-    <li class="news-grid-item news-item reveal" data-tags="Жизнь СНО">
-      <a class="news-preview" href="../news/pervokursniki.html">
-        <img class="news-preview-image" src="../images/pervokursniki-2026-1.png" alt="Встреча НСО «Прометей» со студентами первого курса" width="1280" height="720" loading="lazy" decoding="async">
-        <div class="news-preview-copy">
-          <div class="news-meta"><span class="news-date">3 сентября 2026</span><span class="news-tag">Жизнь СНО</span></div>
-          <h3>Встреча с первокурсниками направления «Международные отношения»</h3>
-          <span class="news-read-more">Читать новость ↗</span>
-        </div>
-      </a>
-    </li>
-    <li class="news-grid-item news-item reveal" data-tags="Наши успехи">
-      <a class="news-preview" href="../news/vybory.html">
-        <img class="news-preview-image" src="../images/vybory-2026.jpg" alt="Выборы председателя СНО «Прометей»" width="1280" height="720" loading="lazy" decoding="async">
-        <div class="news-preview-copy">
-          <div class="news-meta"><span class="news-date">29 июня 2026</span><span class="news-tag">Наши успехи</span></div>
-          <h3>Выборы председателя</h3>
-          <span class="news-read-more">Читать новость ↗</span>
-        </div>
-      </a>
-    </li>
-  </ul>
-</div></main>
+<main class="page-main"><div class="section-inner"><article class="content-card">
+  <a class="back-link" href="../news/index.html">← Все новости</a>
+  <div class="content-header">
+    <span class="news-tag">Мероприятия и события</span>
+    <p class="eyebrow" style="margin-top:1rem">Анонс · 24 октября</p>
+    <h1>«Мир на грани: Холодная война»</h1>
+  </div>
+  <img class="news-image" src="../images/cold-war.png" alt="Афиша «Мир на грани: Холодная война» — 24 октября" width="1672" height="941" decoding="async">
+  <div class="article-body news-article-body"><p>24 октября СНО «Прометей» проведёт стратегическую симуляцию, посвящённую одному из главных международных противостояний XX в., Холодной войне</p>
+<p>Главная особенность мероприятия: события будут разворачиваться в Hearts of Iron IV</p>
+<p>🎮 Hearts of Iron IV - глобальная стратегическая компьютерная игра, в которой участники смогут управлять государствами, вести переговоры, принимать политические и военные решения и определять дальнейшее развитие международного кризиса</p>
+    <details class="article-quote">
+      <summary>
+        <span class="quote-preview">Мир разделён между двумя центрами силы. СССР и США борются за политическое, военное и экономическое влияние…</span>
+        <span class="quote-toggle"><span class="quote-show">Развернуть</span><span class="quote-hide">Свернуть</span><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></span>
+      </summary>
+      <div class="quote-content">
+        <p>Мир разделён между двумя центрами силы. СССР и США борются за политическое, военное и экономическое влияние. Военные блоки расширяются. Гонка вооружений набирает обороты. Региональные конфликты становятся частью глобального соперничества, а каждое решение способно изменить баланс сил</p>
+        <p>Участникам предстоит возглавить государства, определить их внешнеполитический курс, заключать союзы, вести переговоры, участвовать в международных кризисах и добиваться собственных стратегических целей.<br>Но главное правило Холодной войны остаётся прежним: противостояние сверхдержав не должно привести мир к ядерной катастрофе</p>
+        <p>История уже показала, чем закончилась Холодная война. В Hearts of Iron IV всё может сложиться иначе</p>
+        <p>Сохранится ли привычный мировой порядок? Кто получит преимущество в глобальном противостоянии? Удастся ли избежать Третьей мировой войны?</p>
+        <p>На этот раз ответ зависит от решений участников</p>
+      </div>
+    </details><p>⚠️ Количество мест ограничено, поэтому скорее <a href="../registration-cold-war.html">регистрируйся</a></p>
+<p>⏰️ 24 октября, 10:30</p>
+<p>📍 онлайн, в стратегической симуляции Hearts of Iron IV</p>
+<p>💼 <a href="https://t.me/prometeincfu" target="_blank" rel="noopener noreferrer">СНО «Прометей»</a> ФМО СКФУ</p>
+<p>ℹ️ По организационным вопросам: председатель СНО «Прометей» <a href="https://t.me/tylench1k_0806" target="_blank" rel="noopener noreferrer">Никита Ярмульский</a></p></div>
+</article></div></main>
 <footer class="site-footer">
   <div class="footer-card">
     <div class="footer-top">
@@ -154,6 +126,6 @@
 <script src="../js/theme.js"></script>
 <script src="../js/nav.js"></script>
 <script src="../js/reveal.js"></script>
-<script src="../js/news-filter.js"></script>
+<script src="../js/article-quote.js"></script>
 </body>
 </html>
