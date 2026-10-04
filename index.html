@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<script>(function(){var t=localStorage.getItem('prometheus-theme');if(!t){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Прометей — СНО ФМО СКФУ</title>
+<meta name="description" content="Студенческое научное общество факультета международных отношений СКФУ.">
+<meta name="theme-color" content="#FAF6EE">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/buttons.css">
+<link rel="stylesheet" href="css/header.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/hero.css">
+<link rel="stylesheet" href="css/directions.css">
+<link rel="stylesheet" href="css/news.css">
+<link rel="stylesheet" href="css/participation.css">
+</head>
+<body>
+<svg class="svg-defs" aria-hidden="true"><defs>
+  <symbol id="flame-line" viewBox="0 0 40 52"><path d="M20 4 C 12 14 6 23 6 33 C 6 43 13 49 20 49 C 27 49 34 43 34 33 C 34 26 30 21 27 18 C 28 23 25 27 22 27 C 24 21 22 12 20 4 Z" fill="none" stroke="var(--color-accent)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</defs></svg>
+
+<div class="site-header-wrap">
+  <header class="site-header">
+    <a href="index.html" class="brand ">
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 40 52"><path d="M20 4 C 12 14 6 23 6 33 C 6 43 13 49 20 49 C 27 49 34 43 34 33 C 34 26 30 21 27 18 C 28 23 25 27 22 27 C 24 21 22 12 20 4 Z" fill="none" stroke="var(--color-accent)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <span class="brand-text">
+        <span class="brand-name">Прометей</span>
+        <span class="brand-sub">СНО · ФМО СКФУ</span>
+      </span>
+    </a>
+    <div class="header-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Переключить тему">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"></circle><line x1="12" y1="2" x2="12" y2="4"></line><line x1="12" y1="20" x2="12" y2="22"></line><line x1="2" y1="12" x2="4" y2="12"></line><line x1="20" y1="12" x2="22" y2="12"></line><line x1="4.9" y1="4.9" x2="6.3" y2="6.3"></line><line x1="17.7" y1="17.7" x2="19.1" y2="19.1"></line><line x1="4.9" y1="19.1" x2="6.3" y2="17.7"></line><line x1="17.7" y1="6.3" x2="19.1" y2="4.9"></line></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="currentColor"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4 7 7 0 0 0 20 14.5Z"></path></svg>
+      </button>
+      <button class="nav-toggle" id="navToggle" aria-label="Открыть меню" aria-expanded="false" aria-controls="mobileSheet">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+</div>
+
+<div class="sheet-backdrop" id="sheetBackdrop"></div>
+<div class="mobile-sheet" id="mobileSheet">
+  <div class="sheet-handle"></div>
+  <div class="sheet-cta"><a href="join.html" class="btn btn-primary">Вступить в СНО</a></div>
+  <div class="sheet-group">
+    <span class="sheet-group-label">Участие</span>
+    <nav class="sheet-nav">
+      <a href="idea.html">Предложить идею</a>
+    </nav>
+  </div>
+  <div class="sheet-group">
+    <span class="sheet-group-label">Материалы</span>
+    <nav class="sheet-nav">
+      <a href="news/index.html">Новости</a>
+      <a href="calendar.html">Календарь мероприятий</a>
+    </nav>
+  </div>
+  <div class="sheet-group">
+    <span class="sheet-group-label">Документы</span>
+    <nav class="sheet-nav">
+      <a href="structure.html">Структура СНО</a>
+      <a href="polozhenie.html">Положение СНО</a>
+      <a href="documents.html">Документы СНО</a>
+    </nav>
+  </div>
+</div>
+<main>
+<section class="hero" id="top"><div class="hero-card"><div class="hero-grid">
+  <div class="hero-text">
+    <p class="eyebrow">Студенческое научное общество · ФМО СКФУ</p>
+    <h1 class="hero-title">Зажигаем интерес к <span>международным отношениям</span></h1>
+    <p class="hero-sub">Занимаемся научной деятельностью, проводим политические модели и помогаем в адаптации первокурсникам.</p>
+    <div class="hero-cta">
+      <a href="join.html" class="btn btn-primary">Вступить в СНО</a>
+      <a href="news/index.html" class="btn btn-ghost">Смотреть новости</a>
+    </div>
+  </div>
+  <div class="profile-wrap">
+    <div class="profile-card">
+      <span class="profile-mark" aria-hidden="true"><svg viewBox="0 0 40 52"><path d="M20 4 C 12 14 6 23 6 33 C 6 43 13 49 20 49 C 27 49 34 43 34 33 C 34 26 30 21 27 18 C 28 23 25 27 22 27 C 24 21 22 12 20 4 Z" fill="none" stroke="var(--color-accent)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <div class="profile-avatar"><img src="images/chairman.jpg" alt="Председатель СНО «Прометей»"></div>
+      <span class="profile-kicker">Руководство</span>
+      <a class="btn btn-primary" href="https://t.me/tylench1k_0806" target="_blank" rel="noopener noreferrer">Председатель СНО</a>
+    </div>
+  </div>
+</div></div></section>
+
+<section class="directions" id="directions" hidden><div class="section-inner">
+  <div class="section-head"><p class="eyebrow">Чем мы занимаемся</p><h2 class="section-title">Направления работы</h2></div>
+  <div class="directions-grid">
+    <a class="direction-card reveal" href="directions/science.html"><div class="direction-icon">🔬</div><h3>Научная деятельность</h3><p>Статьи, доклады и участие в конференциях по международной проблематике.</p><span class="card-more">Подробнее ↗</span></a>
+    <a class="direction-card reveal" href="directions/models.html"><div class="direction-icon">🤵🏻</div><h3>Политические модели</h3><p>Деловые игры и симуляции международных кризисов с решениями от лица государств.</p><span class="card-more">Подробнее ↗</span></a>
+    <a class="direction-card reveal" href="directions/discussions.html"><div class="direction-icon">🗣</div><h3>Круглые столы и дискуссионные клубы</h3><p>Открытые дискуссии и встречи с экспертами по актуальным темам международных отношений.</p><span class="card-more">Подробнее ↗</span></a>
+  </div>
+</div></section>
+
+<section class="news" id="news" data-news-feed data-news-limit="3"><div class="section-inner">
+  <div class="section-head news-head"><div><p class="eyebrow">Новостная лента</p><h2 class="section-title">Что происходит в обществе</h2></div><a class="btn btn-ghost btn-small" href="news/index.html">Все новости ↗</a></div>
+  <div class="news-tools">
+    <button class="filter-chip is-active" data-filter="all">Все</button>
+    <button class="filter-chip" data-filter="Мероприятия и события">Мероприятия и события</button>
+    <button class="filter-chip" data-filter="Жизнь СНО">Жизнь СНО</button>
+    <button class="filter-chip" data-filter="Наши успехи">Наши успехи</button>
+  </div>
+  <div class="news-card">
+    <a class="news-featured news-item reveal" data-tags="Мероприятия и события" href="news/cold-war.html">
+      <div class="news-meta"><span class="news-tag">Мероприятия и события</span><span class="news-date">24 октября · 10:30</span></div>
+      <h3 class="news-featured-title">«Мир на грани: Холодная война»</h3>
+    </a>
+    <a class="news-featured news-item reveal" data-tags="Мероприятия и события" href="news/japan-cuisine-map.html">
+      <div class="news-meta"><span class="news-tag">Мероприятия и события</span><span class="news-date">10 октября · 17:30</span></div>
+      <h3 class="news-featured-title">Japan Cuisine Map: путешествие по вкусам Японии</h3>
+    </a>
+    <a class="news-featured news-item reveal" data-tags="Жизнь СНО" href="news/about-prometey.html">
+      <div class="news-meta"><span class="news-tag">Жизнь СНО</span></div>
+      <h3 class="news-featured-title">Что же такое НСО «Прометей»?</h3>
+    </a>
+    <a class="news-featured news-item reveal" data-tags="Жизнь СНО" href="news/pervokursniki.html" hidden>
+      <div class="news-meta"><span class="news-tag">Жизнь СНО</span><span class="news-date">3 сентября 2026</span></div>
+      <h3 class="news-featured-title">Встреча с первокурсниками направления «Международные отношения»</h3>
+    </a>
+    <a class="news-featured news-item reveal" data-tags="Наши успехи" href="news/vybory.html" hidden>
+      <div class="news-meta"><span class="news-tag">Наши успехи</span><span class="news-date">29 июня 2026</span></div>
+      <h3 class="news-featured-title">Выборы председателя</h3>
+    </a>
+  </div>
+</div></section>
+
+<section class="participation"><div class="section-inner"><div class="participation-card">
+  <div><p class="eyebrow">Участие</p><h2>Не хватает своего проекта?</h2><p>Предложи идею или стань участником&nbsp;СНО.</p></div>
+  <div class="participation-actions">
+    <a class="btn btn-primary" href="join.html">Вступить</a>
+    <a class="btn btn-ghost" href="idea.html">Предложить идею</a>
+  </div>
+</div></div></section>
+</main>
+<footer class="site-footer">
+  <div class="footer-card">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="brand ">
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 40 52"><path d="M20 4 C 12 14 6 23 6 33 C 6 43 13 49 20 49 C 27 49 34 43 34 33 C 34 26 30 21 27 18 C 28 23 25 27 22 27 C 24 21 22 12 20 4 Z" fill="none" stroke="var(--color-accent)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <span class="brand-text">
+        <span class="brand-name">Прометей</span>
+        <span class="brand-sub">СНО · ФМО СКФУ</span>
+      </span>
+    </a>
+        <p>Студенческое научное общество факультета международных отношений СКФУ. Открыты для студентов всех факультетов.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">
+        <span>© 2026 СНО «Прометей» · ФМО СКФУ</span>
+        <span>Ставрополь</span>
+      </div>
+      <div class="social-row">
+        <a class="social-btn" href="https://vk.ru/prometeincfu" target="_blank" rel="noopener noreferrer" aria-label="Прометей ВКонтакте"><span style="font-weight:800;font-size:.82rem;letter-spacing:-.02em">VK</span></a>
+        <a class="social-btn" href="https://t.me/prometeincfu" target="_blank" rel="noopener noreferrer" aria-label="Прометей в Telegram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="21" y1="3" x2="10" y2="14"></line><path d="M21 3L14 21l-4-7-7-4z"></path></svg></a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="js/theme.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/reveal.js"></script>
+<script src="js/news-filter.js"></script>
+</body>
+</html>
