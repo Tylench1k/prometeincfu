@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Редактор новостей — Прометей</title>
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+<main class="admin-shell">
+  <section class="admin-card" id="loginPanel">
+    <p class="eyebrow">СНО · ФМО СКФУ</p>
+    <h1>Редактор новостей</h1>
+    <p class="intro">Войди, чтобы подготовить публикацию для сайта.</p>
+    <form id="loginForm">
+      <label>Логин<input name="login" autocomplete="username" required></label>
+      <label>Пароль<input name="password" type="password" autocomplete="current-password" required></label>
+      <button class="button primary" type="submit">Войти</button>
+      <p class="status" id="loginStatus" role="status"></p>
+    </form>
+  </section>
+
+  <section class="admin-card editor" id="editorPanel" hidden>
+    <div class="topline"><div><p class="eyebrow">СНО · ФМО СКФУ</p><h1>Новая новость</h1></div><button class="button quiet" id="logoutButton" type="button">Выйти</button></div>
+    <p class="intro">Заполни материал и выбери папку сайта на компьютере. Редактор создаст страницу новости, добавит фотографии и обновит главную и ленту новостей.</p>
+    <form id="newsForm">
+      <label>Название новости<input name="title" maxlength="140" required placeholder="Например: Встреча с первокурсниками"></label>
+      <div class="two-columns">
+        <label>Категория<select name="category" required><option>Мероприятия и события</option><option>Жизнь СНО</option><option>Наши успехи</option></select></label>
+        <label>Дата и время мероприятия <span class="optional">(если есть)</span><input name="eventDate" maxlength="80" placeholder="24 октября · 10:30"></label>
+      </div>
+      <label>Текст новости<textarea name="body" rows="9" required placeholder="Каждый абзац отделяй пустой строкой"></textarea></label>
+      <label>Фотографии<input name="photos" type="file" accept="image/*" multiple><span class="help">Можно выбрать несколько фотографий. Перетащи их мышью или пальцем, чтобы изменить порядок.</span></label>
+      <ol class="photo-list" id="photoList" aria-live="polite"></ol>
+      <label class="folder-label"><input id="folderCheckbox" type="checkbox" required> Я выбрал корневую папку сайта с файлами index.html, news, css и js.</label>
+      <button class="button primary" id="publishButton" type="submit">Сохранить файлы сайта</button>
+      <p class="status" id="saveStatus" role="status"></p>
+    </form>
+    <aside class="notice"><strong>Как это работает</strong><p>Этот редактор работает с копией сайта на твоём компьютере. После сохранения проверь файлы, затем загрузи обновлённую папку в GitHub. Пароль в статическом сайте скрывает страницу только от случайного доступа и виден в исходном коде.</p></aside>
+  </section>
+</main>
+<script src="js/admin.js"></script>
+</body>
+</html>
