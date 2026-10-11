@@ -1,7 +1,7 @@
 (function () {
   var reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
 
-  document.querySelectorAll('[data-gallery]').forEach(function (gallery) {
+  document.querySelectorAll('[data-gallery], [data-news-gallery]').forEach(function (gallery) {
     var viewport = gallery.querySelector('.gallery-viewport');
     var slides = gallery.querySelectorAll('.gallery-slide');
     var controls = gallery.querySelector('.gallery-controls');
