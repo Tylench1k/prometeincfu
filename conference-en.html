@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<script>(function(){var t=localStorage.getItem('prometheus-theme');if(!t){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);})();</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Conference application — Prometheus</title>
+<meta name="description" content="Application for participation in the international scientific conference of the 3rd NCFU Model SCO 2026.">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="theme-color" content="#FAF6EE">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/buttons.css">
+<link rel="stylesheet" href="css/header.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/footer.css">
+<link rel="stylesheet" href="css/page.css">
+<link rel="stylesheet" href="css/forms.css">
+<link rel="stylesheet" href="css/conference.css">
+</head>
+<body>
+<svg class="svg-defs" aria-hidden="true"><defs>
+  <symbol id="flame-line" viewBox="0 0 40 52"><path d="M20 4 C 12 14 6 23 6 33 C 6 43 13 49 20 49 C 27 49 34 43 34 33 C 34 26 30 21 27 18 C 28 23 25 27 22 27 C 24 21 22 12 20 4 Z" fill="none" stroke="var(--color-accent)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</defs></svg>
+
+<div class="site-header-wrap">
+  <header class="site-header">
+    <a href="index.html" class="brand ">
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 40 52"><path d="M20 4 C 12 14 6 23 6 33 C 6 43 13 49 20 49 C 27 49 34 43 34 33 C 34 26 30 21 27 18 C 28 23 25 27 22 27 C 24 21 22 12 20 4 Z" fill="none" stroke="var(--color-accent)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <span class="brand-text">
+        <span class="brand-name">Prometheus</span>
+        <span class="brand-sub">SSS · FIR NCFU</span>
+      </span>
+    </a>
+    <div class="header-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Switch theme">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4"></circle><line x1="12" y1="2" x2="12" y2="4"></line><line x1="12" y1="20" x2="12" y2="22"></line><line x1="2" y1="12" x2="4" y2="12"></line><line x1="20" y1="12" x2="22" y2="12"></line><line x1="4.9" y1="4.9" x2="6.3" y2="6.3"></line><line x1="17.7" y1="17.7" x2="19.1" y2="19.1"></line><line x1="4.9" y1="19.1" x2="6.3" y2="17.7"></line><line x1="17.7" y1="6.3" x2="19.1" y2="4.9"></line></svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="currentColor"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4 7 7 0 0 0 20 14.5Z"></path></svg>
+      </button>
+      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileSheet">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+</div>
+
+<div class="sheet-backdrop" id="sheetBackdrop"></div>
+<div class="mobile-sheet" id="mobileSheet">
+  <div class="sheet-handle"></div>
+  <div class="sheet-cta"><a href="join.html" class="btn btn-primary">Join the society</a></div>
+  <div class="sheet-group">
+    <span class="sheet-group-label">Participation</span>
+    <nav class="sheet-nav">
+      <a href="idea.html">Submit an idea</a>
+    </nav>
+  </div>
+  <div class="sheet-group">
+    <span class="sheet-group-label">Resources</span>
+    <nav class="sheet-nav">
+      <a href="news/index.html">News</a>
+      <a href="calendar.html">Events calendar</a>
+    </nav>
+  </div>
+  <div class="sheet-group">
+    <span class="sheet-group-label">Documents</span>
+    <nav class="sheet-nav">
+      <a href="structure.html">SSS structure</a>
+      <a href="polozhenie.html">SSS regulations</a>
+      <a href="documents.html">SSS documents</a>
+    </nav>
+  </div>
+</div>
+<main class="page-main"><div class="section-inner"><article class="content-card form-card">
+  <a class="back-link" href="index.html">← Home</a>
+  <div class="content-header"><p class="eyebrow">3rd NCFU Model SCO 2026 · 2–3 December</p><h1>Application for the Scientific Conference</h1><p>International Conference “Strengthening Peace, Security and Stability in the Eurasian Region: Theory and Practice of the SCO”</p></div>
+  <form class="native-form conf-form" data-conf-form data-form-language="en" novalidate>
+    <p class="form-required-note">Fields marked with <span class="required-mark">*</span> are required.</p>
+    <div class="form-grid">
+<div class="form-field form-field-wide"><label for="f-fullName">Full name <span class="required-mark" aria-hidden="true">*</span></label><input id="f-fullName" name="fullName" type="text" autocomplete="name" required></div>
+<div class="form-field"><label for="f-city">City, country <span class="required-mark" aria-hidden="true">*</span></label><input id="f-city" name="city" type="text" autocomplete="address-level2" required></div>
+<div class="form-field form-field-wide"><label for="f-organization">Place of employment / study (full official name of the institution) <span class="required-mark" aria-hidden="true">*</span></label><textarea id="f-organization" name="organization" rows="3" autocomplete="organization" required></textarea></div>
+<div class="form-field form-field-wide"><label for="f-position">Position, academic degree and academic title. For students (school students, university students, postgraduate students) – class / year of study and field of study <span class="required-mark" aria-hidden="true">*</span></label><textarea id="f-position" name="position" rows="3" autocomplete="off" required></textarea></div>
+<div class="form-field form-field-wide"><label for="f-supervisor">Academic supervisor (for students): full name, academic degree, academic title and position</label><textarea id="f-supervisor" aria-describedby="f-supervisor-help" name="supervisor" rows="3" autocomplete="off"></textarea><p class="field-help field-note" id="f-supervisor-help">Papers submitted by students will not be accepted without an academic supervisor.</p></div>
+<div class="form-field form-field-wide"><label for="f-title">Title of the paper <span class="required-mark" aria-hidden="true">*</span></label><input id="f-title" name="title" type="text" autocomplete="off" required></div>
+<div class="form-field form-field-wide"><label for="f-section">Conference section <span class="required-mark" aria-hidden="true">*</span></label><input id="f-section" name="section" type="text" autocomplete="off" required></div>
+<fieldset class="form-field form-field-wide form-options"><legend>Form of participation <span class="required-mark" aria-hidden="true">*</span></legend><label class="form-choice"><input type="radio" name="format" value="In person" required>In person</label><label class="form-choice"><input type="radio" name="format" value="By correspondence" required>By correspondence</label><label class="form-choice"><input type="radio" name="format" value="Remote" required>Remote</label></fieldset>
+<div class="form-field form-field-wide"><label for="f-address">Postal address, postal code <span class="required-mark" aria-hidden="true">*</span></label><input id="f-address" name="address" type="text" autocomplete="street-address" required></div>
+<div class="form-field"><label for="f-phone">Telephone <span class="required-mark" aria-hidden="true">*</span></label><input id="f-phone" name="phone" type="tel" autocomplete="tel" required></div>
+<div class="form-field"><label for="f-email">E-mail <span class="required-mark" aria-hidden="true">*</span></label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+    <div class="form-field form-field-wide"><label for="f-file">Paper file <span class="required-mark" aria-hidden="true">*</span></label><input id="f-file" name="file" type="file" accept=".pdf,.doc,.docx" aria-describedby="f-file-help" required><p class="field-help" id="f-file-help">Formats: PDF, DOC, DOCX. Maximum size: 10 MB. Please format the paper according to the requirements below.</p><p class="field-help file-chosen" data-file-chosen></p></div>
+    <div class="conf-hp" aria-hidden="true"><label>Website<input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+    <fieldset class="form-field form-field-wide form-options"><legend>Personal data <span class="required-mark" aria-hidden="true">*</span></legend><label class="form-choice"><input type="checkbox" name="consent" value="yes" required>I consent to the processing of my personal data by the "Prometheus" Student Scientific Society for the purposes of registration, feedback, and event notifications</label></fieldset>
+    </div>
+    <div class="form-actions"><button class="btn btn-primary" type="submit">Submit application and paper</button><p class="form-status" data-form-status role="status" aria-live="polite"></p></div>
+  </form>
+  <section class="form-response" data-form-response hidden>
+    <span class="form-success-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m5 12 4 4 10-10"/></svg></span>
+    <h2 tabindex="-1">Application submitted</h2>
+    <p>We have received your application form and paper. Thank you for taking part in the conference!</p>
+    <a class="btn btn-primary" href="index.html">Go to homepage</a>
+  </section>
+  <section class="conf-rules" aria-labelledby="rules-h"><h2 id="rules-h">Paper formatting requirements</h2><ul class="conf-rules-list"><li class="conf-rule"><h3>Length</h3><p>Up to 6 pages.</p></li><li class="conf-rule"><h3>Technical requirements</h3><p>Times New Roman, 1.5 line spacing, 14 pt (12 pt for the reference list). First-line indentation – 1.25 cm. Justified alignment. Margins: top and bottom – 2 cm; left – 3 cm; right – 1.5 cm.</p></li><li class="conf-rule"><h3>Authors and title</h3><p>Author’s initials and surname on the right, in bold; below – the academic supervisor’s initials and surname; then the title of the paper in uppercase letters, also in bold.</p></li><li class="conf-rule"><h3>Text and illustrations</h3><p>No word hyphenation. No automatic footnotes. Black-and-white graphs, charts and tables with captions may be included. Figures and illustrations are not permitted.</p></li><li class="conf-rule"><h3>Typing rules</h3><p>No more than one space between words, no letter-spacing inside words, no space before punctuation marks. Distinguish between en dash and hyphen.</p></li><li class="conf-rule"><h3>In-text references</h3><p>In square brackets: reference number and page – [1, p. 35]. Electronic resources without a page – [7]. A source cited earlier keeps its number. Several entries in ascending order, separated by semicolons: [10, p. 5; 20, p. 3; 25, p. 1].</p></li><li class="conf-rule"><h3>Reference list</h3><p>In alphabetical order after the main text. One entry per number. Monographs and scholarly articles as print publications, without electronic resource information. References in Russian first, then in all other languages.</p></li></ul></section>
+</article></div></main>
+<footer class="site-footer">
+  <div class="footer-card">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="brand ">
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 40 52"><path d="M20 4 C 12 14 6 23 6 33 C 6 43 13 49 20 49 C 27 49 34 43 34 33 C 34 26 30 21 27 18 C 28 23 25 27 22 27 C 24 21 22 12 20 4 Z" fill="none" stroke="var(--color-accent)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+      <span class="brand-text">
+        <span class="brand-name">Prometheus</span>
+        <span class="brand-sub">SSS · FIR NCFU</span>
+      </span>
+    </a>
+        <p>Student Scientific Society of the Faculty of International Relations, NCFU. Open to students from all faculties.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">
+        <span>© 2026 Prometheus SSS · FIR NCFU</span>
+        <span>Stavropol</span>
+      </div>
+      <div class="social-row">
+        <a class="social-btn" href="https://vk.ru/prometeincfu" target="_blank" rel="noopener noreferrer" aria-label="Prometheus on VK"><span style="font-weight:800;font-size:.82rem;letter-spacing:-.02em">VK</span></a>
+        <a class="social-btn" href="https://t.me/prometeincfu" target="_blank" rel="noopener noreferrer" aria-label="Prometheus on Telegram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="21" y1="3" x2="10" y2="14"></line><path d="M21 3L14 21l-4-7-7-4z"></path></svg></a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="js/theme.js"></script>
+<script src="js/nav.js"></script>
+<script src="js/reveal.js"></script>
+<script src="js/conference-form.js"></script>
+</body>
+</html>
