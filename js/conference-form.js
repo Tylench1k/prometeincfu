@@ -1,10 +1,10 @@
 (function () {
   'use strict';
 
-  // ВСТАВЬТЕ СЮДА адрес веб-приложения Google Apps Script (см. ИНСТРУКЦИЯ.md, шаг 4).
+  // ВСТАВЬТЕ СЮДА адрес веб-приложения Google Apps Script (см. ИНСТРУКЦИЯ.md, шаг 3).
   var ENDPOINT = 'PASTE_WEB_APP_URL_HERE';
   // Должен совпадать с TOKEN в Code.gs (уже подставлен автоматически).
-  var TOKEN = '2574897af634631fab1473a7b91cbfa8';
+  var TOKEN = '99927afddf35a2127adb069aa33c4b9d';
   var MAX_BYTES = 10 * 1024 * 1024;
   var ALLOWED = ['pdf', 'doc', 'docx'];
   var MSG = {
@@ -38,11 +38,13 @@
   var m = MSG[lang];
   var card = form.closest('.form-card');
   var response = card.querySelector('[data-form-response]');
+  var frame = card.querySelector('[data-form-frame]');
   var status = form.querySelector('[data-form-status]');
   var submit = form.querySelector('[type="submit"]');
-  var fileInput = form.querySelector('input[type="file"]');
+  var fileInput = document.getElementById('f-file');
   var chosen = form.querySelector('[data-file-chosen]');
-  var pending = false;
+  var pending = false;   // идёт отправка
+  var posted = false;    // анкета ушла в Google Форму, ждём ответ iframe
   var timer;
   response.hidden = true;
 
@@ -74,6 +76,7 @@
 
   function fail(text) {
     pending = false;
+    posted = false;
     window.clearTimeout(timer);
     submit.disabled = false;
     status.textContent = text;
@@ -94,26 +97,32 @@
     status.textContent = m.sending;
     timer = window.setTimeout(function () { if (pending) status.textContent = m.slow; }, 15000);
 
-    var d = new FormData(form);
-    var data = { token: TOKEN, lang: lang, website: d.get('website') || '' };
-    ['fullName', 'city', 'organization', 'position', 'supervisor', 'title', 'section', 'format', 'address', 'phone', 'email'].forEach(function (k) {
-      data[k] = String(d.get(k) || '');
-    });
-
+    // Шаг 1: статья -> Google Диск (через Apps Script, папка зависит от языка страницы).
+    // Шаг 2: анкета -> Google Форма (обычная отправка формы в скрытый iframe).
+    // Анкета уходит только после успешной загрузки статьи, чтобы заявка не получилась «без статьи».
     readBase64(file).then(function (b64) {
-      data.file = { name: file.name, mime: file.type || '', base64: b64 };
-      // text/plain keeps this a "simple" request, so no CORS preflight is needed for Apps Script.
-      return fetch(ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(data) });
+      var payload = { token: TOKEN, lang: lang, website: document.getElementById('f-website').value || '', file: { name: file.name, mime: file.type || '', base64: b64 } };
+      // text/plain — «простой» запрос, preflight (CORS) для Apps Script не нужен.
+      return fetch(ENDPOINT, { method: 'POST', headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(payload) });
     }, function () { throw new Error('read'); }).then(function (r) { return r.json(); }).then(function (res) {
       if (!res || !res.ok) throw new Error((res && res.error) || 'server');
-      pending = false;
-      window.clearTimeout(timer);
-      form.hidden = true;
-      response.hidden = false;
-      response.querySelector('h2').focus({ preventScroll: true });
-      response.scrollIntoView({ behavior: 'auto', block: 'start' });
+      posted = true;
+      form.submit();
     }).catch(function (err) {
       fail(err && err.message === 'read' ? m.errRead : m.errSend);
     });
+  });
+
+  frame.addEventListener('load', function () {
+    if (!posted) return;
+    pending = false;
+    posted = false;
+    window.clearTimeout(timer);
+    submit.disabled = false;
+    status.textContent = '';
+    form.hidden = true;
+    response.hidden = false;
+    response.querySelector('h2').focus({ preventScroll: true });
+    response.scrollIntoView({ behavior: 'auto', block: 'start' });
   });
 })();
