@@ -1,0 +1,16 @@
+/* Страницы заявок на научную конференцию (не индексируются, доступны по прямой ссылке) */
+.form-field input[type="tel"], .form-field input[type="email"] { display: block; width: 100%; min-height: 48px; padding: .8rem 1rem; border: 1px solid var(--color-hairline); border-radius: var(--radius-control); background: var(--color-page); color: var(--color-ink); font: inherit; font-size: .95rem; line-height: 1.55; }
+.form-field input[type="tel"]:focus-visible, .form-field input[type="email"]:focus-visible, .form-field input[type="file"]:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; border-color: var(--color-accent); }
+.form-field input[type="file"] { display: block; width: 100%; padding: .7rem 1rem; border: 1px dashed var(--color-hairline); border-radius: var(--radius-control); background: var(--color-page); color: var(--color-ink); font: inherit; font-size: .92rem; cursor: pointer; }
+.form-field input[type="file"]::file-selector-button { margin-right: .9rem; padding: .5rem 1rem; border: 0; border-radius: var(--radius-control); background: var(--color-accent-deep); color: #fff; font: inherit; font-weight: 600; cursor: pointer; }
+.form-field input:invalid:not(:placeholder-shown):not([type="file"]):not([type="checkbox"]):not([type="radio"]) { border-color: var(--color-accent-deep); }
+.field-note { margin: .5rem 0 0; font-style: italic; }
+.file-chosen { margin: .35rem 0 0; color: var(--color-ink); font-weight: 600; }
+.conf-hp { position: absolute; left: -9999px; width: 1px; height: 1px; overflow: hidden; }
+.conf-rules { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--color-hairline); }
+.conf-rules h2 { margin: 0 0 1.25rem; font-size: 1.3rem; }
+.conf-rules-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; margin: 0; padding: 0; list-style: none; }
+.conf-rule { padding: 1.1rem 1.25rem; border: 1px solid var(--color-hairline); border-radius: var(--radius-control); background: var(--color-page); }
+.conf-rule h3 { margin: 0 0 .4rem; font-size: .95rem; font-weight: 700; color: var(--color-ink); }
+.conf-rule p { margin: 0; font-size: .87rem; line-height: 1.65; color: var(--color-graphite); }
+@media (max-width: 640px) { .conf-rules-list { grid-template-columns: 1fr; } }
