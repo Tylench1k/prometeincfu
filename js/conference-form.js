@@ -2,7 +2,7 @@
   'use strict';
 
   // ВСТАВЬТЕ СЮДА адрес веб-приложения Google Apps Script (см. ИНСТРУКЦИЯ.md, шаг 3).
-  var ENDPOINT = 'PASTE_WEB_APP_URL_HERE';
+  var ENDPOINT = 'https://script.google.com/macros/s/AKfycby2bl6dTmNICKdhod1QDubd2BJajgcgfBV7wY_UyoOIvNa9Pd78a-wDc2pALFZZojomeA/exec';
   // Должен совпадать с TOKEN в Code.gs (уже подставлен автоматически).
   var TOKEN = '99927afddf35a2127adb069aa33c4b9d';
   var MAX_BYTES = 10 * 1024 * 1024;
