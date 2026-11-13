@@ -76,8 +76,8 @@
     <input type="hidden" name="fvv" value="1">
     <input type="hidden" name="pageHistory" value="0">
     <div class="form-grid">
-<div class="form-field form-field-wide"><label for="field-1402929121">Фамилия, имя и отчество <span class="required-mark" aria-hidden="true">*</span></label><input id="field-1402929121" name="entry.1402929121" type="text" autocomplete="name" required></div><div class="form-field"><label for="field-534511764">Контактные данные (VK) <span class="required-mark" aria-hidden="true">*</span></label><input id="field-534511764" name="entry.534511764" type="text" required></div><div class="form-field"><label for="field-476962736">Контактные данные (Telegram) <span class="required-mark" aria-hidden="true">*</span></label><input id="field-476962736" name="entry.476962736" type="text" required></div>
-<div class="form-field form-field-wide"><label for="field-574474097">Номер группы (например, МОТ-б-о-21-1) <span class="required-mark" aria-hidden="true">*</span></label><input id="field-574474097" name="entry.574474097" type="text" required></div><fieldset class="form-field form-field-wide form-options"><legend>Персональные данные <span class="required-mark" aria-hidden="true">*</span></legend><label class="form-choice"><input type="checkbox" name="entry.448665978" value="согласен(а) на обработку моих персональных данных СНО «Прометей» для регистрации, обратной связи и информирования о мероприятиях" required>Согласен(а) на обработку моих персональных данных СНО «Прометей» для регистрации, обратной связи и информирования о мероприятиях</label></fieldset></div>
+<div class="form-field form-field-wide"><label for="field-1402929121">Фамилия Имя Отчество <span class="required-mark" aria-hidden="true">*</span></label><input id="field-1402929121" name="entry.1402929121" type="text" autocomplete="name" required></div><div class="form-field"><label for="field-534511764">Контактные данные (vk) <span class="required-mark" aria-hidden="true">*</span></label><input id="field-534511764" name="entry.534511764" type="text" required></div><div class="form-field"><label for="field-476962736">Контактные данные (tg) <span class="required-mark" aria-hidden="true">*</span></label><input id="field-476962736" name="entry.476962736" type="text" required></div>
+<div class="form-field form-field-wide"><label for="field-574474097">Номер группы (например, МОТ-б-о-21-1) <span class="required-mark" aria-hidden="true">*</span></label><input id="field-574474097" name="entry.574474097" type="text" required></div><div class="form-field form-field-wide"><label for="field-city">Какой город вы бы хотели изучать и почему? <span class="required-mark" aria-hidden="true">*</span></label><textarea id="field-city" name="entry.CITY_ENTRY_ID" rows="5" required></textarea></div><fieldset class="form-field form-field-wide form-options"><legend>Персональные данные <span class="required-mark" aria-hidden="true">*</span></legend><label class="form-choice"><input type="checkbox" name="entry.448665978" value="согласен(а) на обработку моих персональных данных СНО «Прометей» для регистрации, обратной связи и информирования о мероприятиях" required>Согласен(а) на обработку моих персональных данных СНО «Прометей» для регистрации, обратной связи и информирования о мероприятиях</label></fieldset></div>
     <div class="form-actions"><button class="btn btn-primary" type="submit">Зарегистрироваться</button><p class="form-status" data-form-status role="status" aria-live="polite"></p></div>
   </form>
   <section class="form-response" data-form-response hidden>
@@ -117,6 +117,12 @@
 <script src="js/theme.js"></script>
 <script src="js/nav.js"></script>
 <script src="js/reveal.js"></script>
+<script>
+/* Номер поля «город» в Google Форме. Замените CITY_ENTRY_ID на число из ссылки предзаполнения (entry.ЧИСЛО=...). */
+(function(){var f=document.querySelector('[data-native-form]'),c=f&&f.querySelector('#field-city');
+if(c&&/CITY_ENTRY_ID/.test(c.name)){f.addEventListener('submit',function(e){e.preventDefault();e.stopImmediatePropagation();
+var st=f.querySelector('[data-form-status]');if(st)st.textContent='Форма не настроена: укажите номер поля «город» (entry) в коде страницы.';},true);}})();
+</script>
 <script src="js/forms.js"></script>
 </body>
 </html>
