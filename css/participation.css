@@ -4,6 +4,8 @@
 .participation-card h2 { font-size: clamp(1.5rem, 3vw, 2rem); margin: .4rem 0 .7rem; font-weight: 800; color: var(--color-on-block); }
 .participation-card p { color: rgba(250,246,238,.68); max-width: 54ch; line-height: 1.6; }
 .participation-actions { display: flex; flex-wrap: wrap; gap: .6rem; justify-content: flex-end; }
+.participation-actions .btn-primary { background: var(--color-on-block); color: var(--color-block); }
+.participation-actions .btn-primary:hover { background: #fff; }
 .participation-actions .btn-ghost { background: transparent; border-color: rgba(250,246,238,.22); color: var(--color-on-block); }
 .participation-actions .btn-ghost:hover { border-color: var(--color-accent-on-block); color: var(--color-accent-on-block); }
 

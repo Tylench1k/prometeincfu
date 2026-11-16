@@ -1,13 +1,96 @@
-@keyframes fade-up { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+/* ===== Плавные переходы между страницами (Chrome/Edge/Safari — где поддерживается) ===== */
+@view-transition { navigation: auto; }
+.site-header-wrap { view-transition-name: site-header; }
+::view-transition-group(site-header) { animation-duration: 0s; }
+::view-transition-old(root) { animation: vt-out .2s var(--ease-in-out) both; }
+::view-transition-new(root) { animation: vt-in .45s var(--ease-out) both; }
+@keyframes vt-out { to { opacity: 0; } }
+@keyframes vt-in { from { opacity: 0; transform: translate3d(0, 10px, 0); } }
 
-@media (prefers-reduced-motion: no-preference) {
-  .hero-text .eyebrow, .hero-title, .hero-sub, .hero-cta { animation: fade-up .8s var(--ease) both; }
-  .hero-title { animation-delay: .1s; }
-  .hero-sub { animation-delay: .22s; }
-  .hero-cta { animation-delay: .34s; }
-  .profile-wrap { animation: fade-up .8s var(--ease) .2s both; }
+/* ===== Базовые «входные» анимации ===== */
+@keyframes rise {
+  from { opacity: 0; transform: translate3d(0, 22px, 0) scale(.985); }
+  to   { opacity: 1; transform: none; }
+}
+@keyframes drop-in {
+  from { opacity: 0; transform: translate3d(0, -14px, 0); }
+  to   { opacity: 1; transform: none; }
+}
+@keyframes pop {
+  from { opacity: 0; transform: scale(.4); }
+  to   { opacity: 1; transform: none; }
+}
+@keyframes draw-underline { to { background-size: 100% 3px; } }
+@keyframes sheet-item {
+  from { opacity: 0; transform: translate3d(0, 18px, 0); }
+  to   { opacity: 1; transform: none; }
 }
 
-.reveal { opacity: 0; transform: translateY(14px); transition: opacity .6s var(--ease), transform .6s var(--ease); }
-.reveal.is-visible { opacity: 1; transform: translateY(0); }
-@media (prefers-reduced-motion: reduce) { .reveal { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: no-preference) {
+  /* главная: тексты появляются по очереди */
+  .hero-card { animation: rise .8s var(--ease-out) backwards; }
+  .hero-text .eyebrow, .hero-title, .hero-sub, .hero-cta { animation: rise .9s var(--ease-out) backwards; }
+  .hero-text .eyebrow { animation-delay: .12s; }
+  .hero-title { animation-delay: .19s; }
+  .hero-sub { animation-delay: .26s; }
+  .hero-cta { animation-delay: .33s; }
+  .profile-wrap { animation: rise 1s var(--ease-out) .22s backwards; }
+  .hero-title span {
+    border-bottom: 0;
+    padding-bottom: 3px;
+    background: linear-gradient(var(--color-accent), var(--color-accent)) 0 100% / 0% 3px no-repeat;
+    -webkit-box-decoration-break: clone; box-decoration-break: clone;
+    animation: draw-underline 1.1s var(--ease-out) .75s forwards;
+  }
+
+  /* внутренние страницы */
+  .page-main .content-card { animation: rise .8s var(--ease-out) backwards; }
+  .page-main .content-header > * { animation: rise .8s var(--ease-out) backwards; }
+  .page-main .content-header > :nth-child(1) { animation-delay: .08s; }
+  .page-main .content-header > :nth-child(2) { animation-delay: .14s; }
+  .page-main .content-header > :nth-child(3) { animation-delay: .2s; }
+  .page-main .article-body > *, .page-main .form-grid > *, .page-main .conf-rule { animation: rise .8s var(--ease-out) backwards; }
+  .page-main .article-body > :nth-child(1), .page-main .form-grid > :nth-child(1) { animation-delay: .22s; }
+  .page-main .article-body > :nth-child(2), .page-main .form-grid > :nth-child(2) { animation-delay: .27s; }
+  .page-main .article-body > :nth-child(3), .page-main .form-grid > :nth-child(3) { animation-delay: .32s; }
+  .page-main .article-body > :nth-child(4), .page-main .form-grid > :nth-child(4) { animation-delay: .37s; }
+  .page-main .article-body > :nth-child(5), .page-main .form-grid > :nth-child(5) { animation-delay: .42s; }
+  .page-main .article-body > :nth-child(n+6), .page-main .form-grid > :nth-child(n+6) { animation-delay: .46s; }
+
+  /* меню-лист: пункты выезжают по очереди */
+  .mobile-sheet.is-open .sheet-cta, .mobile-sheet.is-open .sheet-group { animation: sheet-item .65s var(--ease-out) backwards; }
+  .mobile-sheet.is-open .sheet-cta { animation-delay: .12s; }
+  .mobile-sheet.is-open .sheet-cta + .sheet-group { animation-delay: .17s; }
+  .mobile-sheet.is-open .sheet-cta + .sheet-group + .sheet-group { animation-delay: .22s; }
+  .mobile-sheet.is-open .sheet-cta + .sheet-group + .sheet-group + .sheet-group { animation-delay: .27s; }
+
+  /* успешная отправка формы */
+  .form-response:not([hidden]) { animation: rise .7s var(--ease-out) backwards; }
+  .form-success-mark { animation: pop .8s var(--spring-snappy) .15s backwards; }
+}
+
+/* ===== Появление при прокрутке ===== */
+.reveal {
+  opacity: 0;
+  transform: translate3d(0, 28px, 0) scale(.98);
+  transition: opacity .8s var(--ease-out) var(--reveal-delay, 0s), transform 1s var(--ease-out) var(--reveal-delay, 0s);
+}
+.reveal.is-visible { opacity: 1; transform: none; }
+
+/* ===== Плавная смена темы ===== */
+html.theme-switching *, html.theme-switching *::before, html.theme-switching *::after {
+  transition-property: background-color, color, border-color, box-shadow, fill, stroke, opacity !important;
+  transition-duration: .5s !important;
+  transition-timing-function: var(--ease-in-out) !important;
+  transition-delay: 0s !important;
+}
+
+html.theme-switching .theme-toggle svg { transition-property: transform, opacity !important; transition-duration: .7s, .3s !important; transition-timing-function: var(--spring), var(--ease) !important; }
+
+/* ===== Без анимаций, если так настроена система ===== */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .001ms !important; animation-delay: 0s !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; transition-delay: 0s !important; scroll-behavior: auto !important; }
+  .reveal { opacity: 1; transform: none; }
+  .hero-title span { background-size: 100% 3px; }
+  ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*) { animation: none !important; }
+}

@@ -1,6 +1,12 @@
-.btn { display: inline-flex; align-items: center; justify-content: center; padding: .9rem 1.9rem; font-family: var(--font); font-weight: 700; font-size: .95rem; border-radius: var(--radius-pill); border: 1px solid transparent; cursor: pointer; transition: all .25s var(--ease); }
+.btn { display: inline-flex; align-items: center; justify-content: center; padding: .9rem 1.9rem; font-family: var(--font); font-weight: 700; font-size: .95rem; border-radius: var(--radius-pill); border: 1px solid transparent; cursor: pointer; -webkit-tap-highlight-color: transparent; touch-action: manipulation; user-select: none; -webkit-user-select: none;
+  transition: transform .6s var(--spring), background-color .3s var(--ease), border-color .3s var(--ease), color .3s var(--ease), box-shadow .4s var(--ease); }
 .btn-primary { background: var(--color-ink); color: var(--color-canvas); }
-.btn-primary:hover { background: var(--color-ink-deep); transform: translateY(-1px); box-shadow: var(--shadow-float); }
 .btn-ghost { background: var(--color-surface); border-color: var(--color-hairline); color: var(--color-ink); }
-.btn-ghost:hover { border-color: var(--color-accent); color: var(--color-accent-deep); }
 .btn-small { padding: .7rem 1.15rem; font-size: .82rem; }
+
+@media (hover: hover) {
+  .btn-primary:hover { background: var(--color-ink-deep); transform: translateY(-2px); box-shadow: var(--shadow-float); }
+  .btn-ghost:hover { border-color: var(--color-accent); color: var(--color-accent-deep); transform: translateY(-2px); }
+}
+/* нажатие — как в iOS: кнопка чуть «проваливается» и пружинит обратно */
+.btn:active { transform: scale(.955); transition-duration: .12s, .3s, .3s, .3s, .3s; transition-timing-function: var(--ease-out); }

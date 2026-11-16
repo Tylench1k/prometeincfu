@@ -3,9 +3,9 @@
 .form-field { min-width: 0; margin: 0; padding: 0; border: 0; }
 .form-field-wide { grid-column: 1 / -1; }
 .form-field > label, .form-field legend { display: block; margin-bottom: .6rem; padding: 0; color: var(--color-ink); font-size: .9rem; font-weight: 700; line-height: 1.55; }
-.form-field input[type="text"], .form-field textarea { display: block; width: 100%; min-height: 48px; padding: .8rem 1rem; border: 1px solid var(--color-hairline); border-radius: var(--radius-control); background: var(--color-page); color: var(--color-ink); font: inherit; font-size: .95rem; line-height: 1.55; }
+.form-field input[type="text"], .form-field textarea { display: block; width: 100%; min-height: 48px; padding: .8rem 1rem; border: 1px solid var(--color-hairline); border-radius: var(--radius-control); background: var(--color-page); color: var(--color-ink); font: inherit; font-size: .95rem; line-height: 1.55; transition: border-color .3s var(--ease), background-color .3s var(--ease), box-shadow .4s var(--ease); }
 .form-field textarea { resize: vertical; }
-.form-field input:focus-visible, .form-field textarea:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; border-color: var(--color-accent); }
+.form-field input:focus-visible, .form-field textarea:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; border-color: var(--color-accent); box-shadow: 0 0 0 5px rgba(184,147,90,.14); }
 .form-options .form-choice { display: flex; align-items: flex-start; gap: .75rem; margin-bottom: .75rem; color: var(--color-graphite); font-weight: 500; line-height: 1.65; cursor: pointer; }
 .form-choice input[type="checkbox"], .form-choice input[type="radio"] { width: 18px; height: 18px; flex: 0 0 18px; margin: .2rem 0 0; accent-color: var(--color-accent-deep); cursor: pointer; }
 .required-mark { color: var(--color-accent-deep); }
@@ -16,6 +16,7 @@
 .form-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; margin-top: 1.75rem; }
 .form-status { font-size: .86rem; line-height: 1.65; color: var(--color-graphite); }
 .form-actions button:disabled { opacity: .65; cursor: wait; }
+.form-status { transition: opacity .3s var(--ease); }
 .form-response[hidden], .native-form[hidden] { display: none; }
 .form-response { padding: 1.5rem 0 .5rem; }
 .form-response h2 { margin: 1rem 0 .6rem; font-size: 1.5rem; }
@@ -28,4 +29,11 @@
   .form-grid { grid-template-columns: 1fr; }
   .form-field-wide { grid-column: auto; }
   .form-actions .btn { width: 100%; }
+}
+
+/* плавное раскрытие «списка стран» (где браузер умеет) */
+@supports (interpolate-size: allow-keywords) {
+  :root { interpolate-size: allow-keywords; }
+  .country-options::details-content { block-size: 0; overflow: clip; transition: block-size .5s var(--ease-ios), content-visibility .5s allow-discrete; }
+  .country-options[open]::details-content { block-size: auto; }
 }
